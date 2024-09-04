@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings Page</title>
+	<style>
+		/* Set the background color to dark gray */
+		body {
+			background-color: #7833d2;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		/* Style the main content area */
+		.main-content {
+			flex: 1;
+			padding: 20px;
+			background-color: #8949de;
+			color: #fff;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar */
+		.sidebar {
+			width: 200px;
+			background-color: #8949de;
+			color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar title */
+		.sidebar-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		
+		/* Style the sidebar options */
+		.sidebar-option {
+			margin-bottom: 10px;
+		}
+		
+		.sidebar-option a {
+			color: #fff;
+			text-decoration: none;
+		}
+		
+		.sidebar-option a:hover {
+			color: #ccc;
+		}
+		
+		/* Style the dropdown */
+		.dropdown {
+			position: relative;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #8949de;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			z-index: 1;
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown:hover ~ .sidebar-option {
+			transform: translateY(65px);
+		}
+		
+		.dropdown-content a {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+        .settings-container {
+			width: 400px;
+			margin: 40px auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+        .rectangle {
+			width: 200px;
+			height: 125px;
+			background-color: #222;
+			margin: 10px;
+			border: 1px solid #aaa;
+			position: relative; /* Add this to make the text positionable */
+        }
+
+        .rectangle-text {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #e3dddd;
+		}
+		
+		#rect1 .customize-button {
+			margin-top: 100px;
+			background-color: #444; /* Pinkish color */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#rect1 .customize-button:hover {
+			background-color: #555; /* Light pinkish color */
+		}
+		
+		#rect2 .customize-button {
+			margin-top: 100px;
+			background-color: #571083; /* Greenish color */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#rect2 .customize-button:hover {
+			background-color: #8b30c3; /* Light greenish color */
+		}
+		
+		#rect3 .customize-button {
+			margin-top: 100px;
+			background-color: #2d0611; /* Orangish color */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#rect3 .customize-button:hover {
+			background-color: #4a0b1d; /* Light orangish color */
+		}
+		
+		#rect4 .customize-button {
+			margin-top: 100px;
+			background-color: #5686f6; /* Greenish color */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		#rect4 .customize-button:hover {
+			background-color: #749af1; /* Light greenish color */
+		}
+	</style>
+</head>
+<body>
+	<div class="sidebar">
+		<h2 class="sidebar-title">Options</h2>
+		<div class="sidebar-option dropdown">
+			<a href="#">Gamemodes</a>
+			<div class="dropdown-content">
+				<a href="https://scorpionpredictor.github.io/dashboard/mines">Mines</a>
+				<a href="#">Towers</a>
+			</div>
+		</div>
+		<div class="sidebar-option">
+			<a href="https://scorpionpredictor.github.io/dashboard/settings">Settings</a>
+		</div>
+		<div class="sidebar-option">
+			<a href="#">Our Discord</a>
+		</div>
+	</div>
+    <div class="settings-container">
+		<div class="rectangle" id="rect1">
+			<div class="rectangle-text">Scorpion</div>
+            <button class="customize-button">Customize</button>
+		</div>
+		<div class="rectangle" id="rect2">
+			<div class="rectangle-text">Galaxy</div>
+            <button class="customize-button">Customize</button>
+		</div>
+		<div class="rectangle" id="rect3">
+			<div class="rectangle-text">Dark Red</div>
+            <button class="customize-button">Customize</button>
+		</div>
+		<div class="rectangle" id="rect4">
+			<div class="rectangle-text">Cozy Blue</div>
+            <button class="customize-button">Customize</button>
+		</div>
+	</div>
+
+    <script>
+		// Add event listener to the customize button
+		document.querySelector('.customize-button').addEventListener('click', function() {
+			// TO DO: Add functionality to customize the rectangles
+		});
+	</script>
+	<div class="main-content">
+		<h1>WIP</h1>
+		<p>WIP</p>
+		<!-- Add your main content here -->
+	</div>
+</body>
+</html>

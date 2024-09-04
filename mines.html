@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<style>
+		/* Set the background color to dark gray */
+		body {
+			background-color: #111;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		/* Style the main content area */
+		.main-content {
+			flex: 1;
+			padding: 20px;
+			background-color: #2b2a2a;
+			color: #fff;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar */
+		.sidebar {
+			width: 200px;
+			background-color: #222;
+			color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar title */
+		.sidebar-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		
+		/* Style the sidebar options */
+		.sidebar-option {
+			margin-bottom: 10px;
+		}
+		
+		.sidebar-option a {
+			color: #fff;
+			text-decoration: none;
+		}
+		
+		.sidebar-option a:hover {
+			color: #ccc;
+		}
+		
+		/* Style the dropdown */
+		.dropdown {
+			position: relative;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #222;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			z-index: 1;
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown:hover ~ .sidebar-option {
+			transform: translateY(65px);
+		}
+		
+		.dropdown-content a {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		/* Add style for the box */
+		.box {
+			background-color: #1c1b1b;
+			width: 600px;
+			height: 400px;
+			position: absolute;
+			top: 50%;
+			left: 65%;
+			transform: translate(-50%, -50%);
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			grid-gap: 10px;
+		}
+		
+		/* Add style for the inner boxes */
+		.inner-box {
+	        background-color: #333;
+    	    border: 1px solid #333;
+	        width: 50px; /* Set a fixed width for the inner box */
+        	height: 50px; /* Set a fixed height for the inner box */
+	        position: absolute; /* Make the inner box positionable */
+	        top: 21%; /* Initial top position, you can adjust this */
+	        left: 60%; /* Initial left position, you can adjust this */
+        }
+
+        .inner-box {
+	        background-image: url('mines.png'); /* Replace 'image.jpg' with the path to your image */
+        }
+
+        .inner-box:nth-child(1) {
+	        top: 21%;
+	        left: 60%;
+        }
+
+        .inner-box:nth-child(2) {
+	        top: 21%;
+	        left: 65%;
+        }
+
+        .inner-box:nth-child(3) {
+	        top: 21%;
+	        left: 70%;
+        }
+
+        .inner-box:nth-child(4) {
+	        top: 21%;
+	        left: 75%;
+        }
+
+        .inner-box:nth-child(5) {
+	        top: 21%;
+	        left: 80%;
+        }
+        .inner-box:nth-child(6) {
+	        top: 31%;
+	        left: 60%;
+        }
+
+        .inner-box:nth-child(7) {
+	        top: 31%;
+	        left: 65%;
+        }
+
+        .inner-box:nth-child(8) {
+	        top: 31%;
+	        left: 70%;
+        }
+
+        .inner-box:nth-child(9) {
+	        top: 31%;
+	        left: 75%;
+        }
+
+        .inner-box:nth-child(10) {
+	        top: 31%;
+	        left: 80%;
+        }
+        .inner-box:nth-child(11) {
+	        top: 41%;
+	        left: 60%;
+        }
+
+        .inner-box:nth-child(12) {
+	        top: 41%;
+	        left: 65%;
+        }
+
+        .inner-box:nth-child(13) {
+	        top: 41%;
+	        left: 70%;
+        }
+
+        .inner-box:nth-child(14) {
+	        top: 41%;
+	        left: 75%;
+        }
+
+        .inner-box:nth-child(15) {
+	        top: 41%;
+	        left: 80%;
+        }
+        .inner-box:nth-child(16) {
+	        top: 51%;
+	        left: 60%;
+        }
+
+        .inner-box:nth-child(17) {
+	        top: 51%;
+        	left: 65%;
+        }
+
+        .inner-box:nth-child(18) {
+	        top: 51%;
+	        left: 70%;
+        }
+
+        .inner-box:nth-child(19) {
+	        top: 51%;
+	        left: 75%;
+        }
+
+        .inner-box:nth-child(20) {
+	        top: 51%;
+	        left: 80%;
+        }
+
+        .inner-box:nth-child(21) {
+	        top: 61%;
+        	left: 60%;
+        }
+
+        .inner-box:nth-child(22) {
+	        top: 61%;
+	        left: 65%;
+        }
+
+        .inner-box:nth-child(23) {
+	        top: 61%;
+	        left: 70%;
+        }
+
+        .inner-box:nth-child(24) {
+	        top: 61%;
+	        left: 75%;
+        }
+
+        .inner-box:nth-child(25) {
+	        top: 61%;
+	        left: 80%;
+        }
+	</style>
+</head>
+<body>
+	<div class="sidebar">
+		<h2 class="sidebar-title">Options</h2>
+		<div class="sidebar-option dropdown">
+			<a href="#">Gamemodes</a>
+			<div class="dropdown-content">
+				<a href="#">Mines</a>
+				<a href="#">Towers</a>
+			</div>
+		</div>
+		<div class="sidebar-option">
+			<a href="#">Settings</a>
+		</div>
+		<div class="sidebar-option">
+			<a href="#">Our Discord</a>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+            <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+            <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+            <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+	        <div class="inner-box"></div>
+		<!-- Add your main content here -->
+	</div>
+</body>
+</html>

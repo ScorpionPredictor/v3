@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<style>
+		/* Set the background color to dark gray */
+		body {
+			background-color: #7833d2;
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		/* Style the main content area */
+		.main-content {
+			flex: 1;
+			padding: 20px;
+			background-color: #641f82;
+			color: #fff;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar */
+		.sidebar {
+			width: 200px;
+			background-color: #9341ac;
+			color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px;
+		}
+		
+		/* Style the sidebar title */
+		.sidebar-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		
+		/* Style the sidebar options */
+		.sidebar-option {
+			margin-bottom: 10px;
+		}
+		
+		.sidebar-option a {
+			color: #b17186;
+			text-decoration: none;
+		}
+		
+		.sidebar-option a:hover {
+			color: #ccc;
+		}
+		
+		/* Style the dropdown */
+		.dropdown {
+			position: relative;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #9341ac;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			z-index: 1;
+		}
+		
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		
+		.dropdown:hover ~ .sidebar-option {
+			transform: translateY(65px);
+		}
+		
+		.dropdown-content a {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="sidebar">
+		<h2 class="sidebar-title">Options</h2>
+		<div class="sidebar-option dropdown">
+			<a href="#">Gamemodes</a>
+			<div class="dropdown-content">
+				<a href="#">Mines</a>
+				<a href="#">Towers</a>
+			</div>
+		</div>
+		<div class="sidebar-option">
+			<a href="#">Settings</a>
+		</div>
+		<div class="sidebar-option">
+			<a href="#">Our Discord</a>
+		</div>
+	</div>
+	<div class="main-content">
+		<h1>WIP</h1>
+		<p>WIP</p>
+		<!-- Add your main content here -->
+	</div>
+</body>
+</html>
